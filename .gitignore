@@ -1,6 +1,6 @@
 __pycache__/
 .DS_Store/
-data/
+
 best_model.pt
 venv/
 env/
