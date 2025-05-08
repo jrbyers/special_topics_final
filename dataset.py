@@ -9,7 +9,7 @@ from tqdm import tqdm
 class ToxicCommentsDataset(Dataset):
     def __init__(self, csv_path, tokenizer, max_len):
         self.data = pd.read_csv(csv_path)
-        #self.data = self.data.head(100)
+        self.data = self.data.head(5000)
 
         self.tokenizer = tokenizer
         self.max_len = max_len
@@ -63,7 +63,7 @@ class ToxicCommentsWithLabelsDataset(Dataset):
         merged_df = pd.merge(self.comments_df, self.labels_df, on='id')
 
         # Take the first 100 data points
-        #merged_df = merged_df.head(500)
+        merged_df = merged_df.head(500)
 
         # Re-assign to the original DataFrames
         self.comments_df = merged_df[['id', 'comment_text']]
