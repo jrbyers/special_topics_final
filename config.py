@@ -20,4 +20,4 @@ WEIGHT_DECAY      = 0.01
 WARMUP_PROPORTION = 0.10
 
 GRAD_ACCUM_STEPS = 2
-MODEL_PATH = "checkpoints/bert_finetuned.bin"
+MODEL_PATH = "best_model.pt"
